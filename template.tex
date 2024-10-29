@@ -88,8 +88,8 @@
 %% A teaser figure can be included as follows
 \teaser{
   \centering
-  \includegraphics[width=\linewidth]{MedVizTopicZoom}
-  \caption{The screenshot of the labels generated for the semantic map, showing (a) the topic labels of top-level clusters on the overall map, and (b) the detailed topic labels of a zoomed-in area. }
+  \includegraphics[width=\linewidth]{CypressView}  % replace with MedVizTopicZoom
+  \caption{Screenshot of the labels generated for the semantic map on MedViz, showing (a) the topic labels of top-level clusters on the overall map, and (b) the detailed topic labels of a zoomed-in area.}
   \label{fig:teaser}
 }
 
@@ -122,6 +122,7 @@
 
 %% \section{Introduction} %for journal use above \firstsection{..} instead
 The rapid growth of biomedical research has resulted in an exponential increase in the volume of publications, making it essential for researchers to utilize advanced tools to efficiently explore and analyze this vast body of literature \cite{Gonzalez-Marquez2024}. In recent years, literature-mining tools have gained significant attention, helping researchers extract valuable insights and information from large collections of publications. Among these tools, the application of large language models (LLMs) and text embedding techniques has become increasingly pivotal \cite{Simon2024}. By converting complex scientific texts into unified high-dimensional vectors, LLMs enable the use of machine learning and data mining techniques to facilitate data analysis and visualization.
+
 However, it is still challenging to reveal insights and nuances from large-scale literatures and their high-dimensional vectors, particularly in clustering and topic representation, which are crucial for understanding the topical landscape. In an effective semantic map, closely located embeddings should be semantically related, enabling users to grasp the thematic structure of the map. While existing methods such as BERTopic \cite{Grootendorst2022} and Top2Vec \cite{Angelov2020} offer embedding-based topic modeling, they tend to operate at a fixed level of generality and may not fully capture the fine-grained nuances and hierarchical structures present in large-scale literature collections. To address this, we propose a novel methodology that can capture both general and specific topics across different levels of semantic maps for biomedical publications, allowing for a more interactive and detailed exploration of the topics in clusters and sub-clusters.
 
 \section{Methodology}

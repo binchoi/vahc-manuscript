@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.28)  29 OCT 2024 00:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.10.28)  29 OCT 2024 00:46
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex
-(/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex
+**template.tex
+(./template.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
 (./vgtc.cls
@@ -25,9 +24,9 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 ) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
- (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+Package graphics Info: Driver file: dvips.def on input line 106.
+ (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2022/09/22 v3.1e Graphics/color driver for dvips
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
@@ -122,17 +121,21 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisrulewidth=\dimen171
 ) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/lipsum/lipsum.sty (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-10-09 L3 programming layer (loader) 
- (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count280
+ (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2024-05-08 L3 backend support: dvips
 \l__pdf_internal_box=\box59
+\l__pdf_backend_content_box=\box60
+\l__pdf_backend_model_box=\box61
+\g__pdf_backend_annotation_int=\count280
+\g__pdf_backend_link_int=\count281
+\g__pdf_backend_link_sf_int=\count282
 ))
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count281
-\l__lipsum_a_int=\count282
-\l__lipsum_b_int=\count283
+\g__lipsum_par_int=\count283
+\l__lipsum_a_int=\count284
+\l__lipsum_b_int=\count285
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/mwe/mwe.sty
 Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
 ) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/psnfss/mathptmx.sty
@@ -187,7 +190,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 )) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -199,13 +202,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count284
+\c@section@level=\count286
 ) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen172
-\Hy@linkcounter=\count285
-\Hy@pagecounter=\count286
+\Hy@linkcounter=\count287
+\Hy@pagecounter=\count288
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -213,7 +216,7 @@ Now handling font encoding PD1 ...
 ) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count287
+\Hy@SavedSpaceFactor=\count289
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -241,7 +244,7 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 ))
-\c@Hy@tempcnt=\count288
+\c@Hy@tempcnt=\count290
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -251,7 +254,7 @@ LaTeX Info: Redefining \url on input line 4763.
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count289
+\Fld@menulength=\count291
 \Field@Width=\dimen174
 \Fld@charsize=\dimen175
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -265,17 +268,24 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count290
-\c@Item=\count291
-\c@Hfootnote=\count292
+\Hy@abspage=\count292
+\c@Item=\count293
+\c@Hfootnote=\count294
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
- (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
-\Fld@listcount=\count293
-\c@bookmark@seq@number=\count294
+Package hyperref Info: Driver (default): hdvips.
+ (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hdvips.def
+File: hdvips.def 2024-07-10 v7.01j Hyperref driver for dvips
+ (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pdfmark.def
+File: pdfmark.def 2024-07-10 v7.01j Hyperref definitions for pdfmark specials
+\pdf@docset=\toks21
+\pdf@box=\box62
+\pdf@toks=\toks22
+\pdf@defaulttoks=\toks23
+\HyField@AnnotCount=\count295
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
 \Hy@SectionHShift=\skip59
-) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hypcap/hypcap.sty
+)) (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/hypcap/hypcap.sty
 Package: hypcap 2024-07-26 v1.13 Adjusting the anchors of captions (HO)
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
@@ -284,10 +294,9 @@ Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 274.
+Package xcolor Info: Driver file: dvips.def on input line 274.
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
@@ -350,18 +359,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
 LaTeX Font Info:    ... okay on input line 113.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
 LaTeX Font Info:    ... okay on input line 113.
- (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.jpeg,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
- (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
 \big@size=\dimen176
 Package hyperref Info: Link coloring ON on input line 113.
  (./template.out) (./template.out)
@@ -399,11 +396,8 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 12
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 \abstractwidth=\skip60
-<figures/MedVizTopicZoom.png, id=28, 469.755pt x 189.59143pt>
-File: figures/MedVizTopicZoom.png Graphic file (type png)
-<use figures/MedVizTopicZoom.png>
-Package pdftex.def Info: figures/MedVizTopicZoom.png  used on input line 122.
-(pdftex.def)             Requested size: 458.19154pt x 184.92465pt.
+File: figures/CypressView.eps Graphic file (type eps)
+ <figures/CypressView.eps>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 122.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
@@ -412,11 +406,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 
 
 
-[1{/Users/binchoi/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
+[1
 
 
- <./figures/MedVizTopicZoom.png>]
-Underfull \hbox (badness 1867) in paragraph at lines 137--137
+]
+Underfull \hbox (badness 1867) in paragraph at lines 138--138
 []\OT1/phv/b/n/9 Second phase: topic rep-re-sen-ta-tion based on
  []
 
@@ -432,8 +426,8 @@ LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 1
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 2205) in paragraph at lines 19--19
-[]\OT1/ptm/m/n/8 BAAI.  bge-small-en-v1.5.  [][]$\OT1/txtt/m/n/8 https : / / huggingface . co / BAAI /
+Overfull \hbox (51.26608pt too wide) in paragraph at lines 19--19
+[]\OT1/ptm/m/n/8 BAAI.  bge-small-en-v1.5.  [][][]$\OT1/txtt/m/n/8 https : / / huggingface . co / BAAI / bge-[]small-[]en-[]v1 . 5$[][][][]\OT1/ptm/m/n/8 ,
  []
 
 )
@@ -453,18 +447,12 @@ Package rerunfilecheck Info: File `template.brf' has not changed.
 (rerunfilecheck)             Checksum: 249AEA4339295BE5C2957108E944E81B;373.
  ) 
 Here is how much of TeX's memory you used:
- 12655 strings out of 475537
- 215696 string characters out of 5776540
- 755753 words of memory out of 5000000
- 35098 multiletter control sequences out of 15000+600000
- 591871 words of font info for 93 fonts, out of 8000000 for 9000
+ 12486 strings out of 475538
+ 212125 string characters out of 5776566
+ 759239 words of memory out of 5000000
+ 34971 multiletter control sequences out of 15000+600000
+ 579717 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,13n,93p,1087b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (3 pages, 944842 bytes).
-PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91i,13n,93p,1004b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+Output written on template.dvi (3 pages, 26360 bytes).

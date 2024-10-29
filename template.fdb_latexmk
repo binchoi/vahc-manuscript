@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex template"] 1730176485.71295 "template.aux" "template.bbl" "template" 1730176531.22197 0
+["bibtex template"] 1730177184.56253 "template.aux" "template.bbl" "template" 1730177185.03938 0
   "./abbrv-doi.bst" 1707947791 27244 4c23ed8d63be63dc39b9aab722083c7e ""
   "./template.bib" 1730175115.79189 1838 7d4c92e87dfefcf6b3dbc50134f281a9 ""
-  "template.aux" 1730176531.1553 2539 cc7bce17334a7c061ebbda7be6c37759 "pdflatex"
+  "template.aux" 1730177184.971 2550 9cafe6c8535cbc37a90ddbbba0045129 "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
   (rewritten before read)
-["pdflatex"] 1730176530.48096 "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" "template.pdf" "template" 1730176531.22209 0
-  "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" 1730176530.28842 14047 8065d826d780a5ef04409c87d3f52f3a ""
+["pdflatex"] 1730177184.5819 "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" "template.pdf" "template" 1730177185.03951 0
+  "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" 1730177183.90127 14081 c681a533fdb38adda15196c83276cdc2 ""
   "/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
   "/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -113,12 +113,12 @@
   "/Users/binchoi/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1730173090 336864 fc9328b9facc579a621cf861162263af ""
   "/Users/binchoi/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1730173018 1901429 a66cffc616227849a6860755e874f831 ""
   "/Users/binchoi/Library/TinyTeX/texmf.cnf" 1726685148.97635 708 85fd07691b6294ba94c59dbc62380410 ""
-  "figures/MedVizTopicZoom.png" 1730176233.5841 1076769 b44e2a5b2b3d14a02946bee618fa897c ""
-  "template.aux" 1730176531.1553 2539 cc7bce17334a7c061ebbda7be6c37759 "pdflatex"
-  "template.bbl" 1730176485.73149 2450 3bbb3f3c2bdcd45cfaffa5b3b62d9629 "bibtex template"
-  "template.brf" 1730176531.1562 373 249aea4339295be5c2957108e944e81b "pdflatex"
-  "template.out" 1730176531.15596 1568 ce9cc2e52d57cd90f056e26b8f2b4aaf "pdflatex"
-  "template.tex" 1730176530.28842 14047 8065d826d780a5ef04409c87d3f52f3a ""
+  "figures/CypressView.jpg" 1707947791 527531 5fd97744eefb70a1550ce9bd89b39e49 ""
+  "template.aux" 1730177184.971 2550 9cafe6c8535cbc37a90ddbbba0045129 "pdflatex"
+  "template.bbl" 1730177184.57965 2450 3bbb3f3c2bdcd45cfaffa5b3b62d9629 "bibtex template"
+  "template.brf" 1730177184.97148 373 249aea4339295be5c2957108e944e81b "pdflatex"
+  "template.out" 1730177184.97141 1568 ce9cc2e52d57cd90f056e26b8f2b4aaf "pdflatex"
+  "template.tex" 1730177183.90127 14081 c681a533fdb38adda15196c83276cdc2 ""
   "vgtc.cls" 1707947791 35448 54bdac3a09617e4b0913fc2f7a4a00d4 ""
   (generated)
   "template.aux"

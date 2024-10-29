@@ -195,10 +195,10 @@ INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm
-INPUT ./figures/MedVizTopicZoom.png
-INPUT ./figures/MedVizTopicZoom.png
-INPUT ./figures/MedVizTopicZoom.png
-INPUT ./figures/MedVizTopicZoom.png
+INPUT ./figures/CypressView.jpg
+INPUT ./figures/CypressView.jpg
+INPUT ./figures/CypressView.jpg
+INPUT ./figures/CypressView.jpg
 INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
 INPUT /Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
