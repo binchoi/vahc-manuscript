@@ -1,64 +1,77 @@
 \begin{thebibliography}{1}
 
-\bibitem{Isenberg:2017:VMC}
-P.~Isenberg, F.~Heimerl, S.~Koch, T.~Isenberg, P.~Xu, C.~Stolper, M.~Sedlmair, J.~Chen, T.~M{\"o}ller, and J.~Stasko.
-\newblock {vispubdata.org: A Metadata Collection about {IEEE} Visualization ({VIS}) Publications}.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics}, 23, 2017.
-\newblock To appear. doi: {{%
+\bibitem{Angelov2020}
+D.~Angelov.
+\newblock {Top2Vec: Distributed Representations of Topics}.
+\newblock {\em arXiv preprint arXiv:2008.09470}, Aug 2020. doi: {{%
 10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}TVCG\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2016\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2615308}}
+}{.}\hspace{.4pt}48550\discretionary{/}{%
+}{/}arXiv\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2008\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}09470}}
 
 
-\bibitem{Kindlmann:1999:SAG}
-G.~Kindlmann.
-\newblock Semi-automatic generation of transfer functions for direct volume rendering.
-\newblock Master's thesis, Cornell University, USA, 1999.
+\bibitem{BAAI2023}
+{BAAI}.
+\newblock {bge-small-en-v1.5}.
+\newblock \url{https://huggingface.co/BAAI/bge-small-en-v1.5}, 2023.
+\newblock {Hugging Face}.
 
-\bibitem{Kitware:2003}
-Kitware, Inc.
-\newblock {\em The Visualization Toolkit User's Guide}, January 2003.
-
-\bibitem{Lorensen:1987:MCA}
-W.~E. Lorensen and H.~E. Cline.
-\newblock Marching cubes: A high resolution {3D} surface construction algorithm.
-\newblock {\em SIGGRAPH Computer Graphics}, 21(4):163--169, Aug. 1987. doi: {{%
+\bibitem{Gonzalez-Marquez2024}
+R.~González-Márquez, L.~Schmidt, B.~M. Schmidt, P.~Berens, and D.~Kobak.
+\newblock The landscape of biomedical research.
+\newblock {\em Patterns (N Y)}, 5(6):100968, Apr 2024. doi: {{%
 10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1145\discretionary{/}{%
-}{/}37402\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}37422}}
+}{.}\hspace{.4pt}1016\discretionary{/}{%
+}{/}j\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}patter\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2024\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}100968}}
 
 
-\bibitem{Max:1995:OMF}
-N.~Max.
-\newblock Optical models for direct volume rendering.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics}, 1(2):99--108, June 1995. doi: {{%
+\bibitem{Grootendorst2022}
+M.~Grootendorst.
+\newblock {BERTopic: Neural topic modeling with a class-based TF-IDF procedure}.
+\newblock {\em arXiv preprint arXiv:2203.05794}, Mar 2022. doi: {{%
 10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}2945\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}468400}}
+}{.}\hspace{.4pt}48550\discretionary{/}{%
+}{/}arXiv\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2203\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}05794}}
 
 
-\bibitem{Nielson:1991:TAD}
-G.~M. Nielson and B.~Hamann.
-\newblock The asymptotic decider: Removing the ambiguity in marching cubes.
-\newblock In {\em Proc.\ Visualization}, pp. 83--91. IEEE Computer Society, Los Alamitos, 1991. doi: {{%
+\bibitem{McInnes2017}
+L.~McInnes, J.~Healy, and S.~Astels.
+\newblock {hdbscan: Hierarchical density based clustering}.
+\newblock {\em Journal of Open Source Software}, 2(11):205, 2017. doi: {{%
 10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}VISUAL\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1991\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}175782}}
+}{.}\hspace{.4pt}21105\discretionary{/}{%
+}{/}joss\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}00205}}
 
 
-\bibitem{Wyvill:1986:DSS}
-G.~Wyvill, C.~McPheeters, and B.~Wyvill.
-\newblock Data structure for \emph{soft} objects.
-\newblock {\em The Visual Computer}, 2(4):227--234, Aug. 1986. doi: {{%
+\bibitem{Simon2024}
+E.~Simon, K.~Swanson, and J.~Zou.
+\newblock Language models for biological research: a primer.
+\newblock {\em Nat Methods}, 21:1422--1429, 2024. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1038\discretionary{/}{%
+}{/}s41592\discretionary{%
+}{-}{-}024\discretionary{%
+}{-}{-}02354\discretionary{%
+}{-}{-}y}}
+
+
+\bibitem{vanderMaaten2008}
+L.~van~der Maaten and G.~Hinton.
+\newblock {Visualizing data using t-SNE}.
+\newblock {\em J Mach Learn Res}, 9:2579--2605, 2008. doi: {{%
 10\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}1007\discretionary{/}{%
-}{/}BF01900346}}
+}{/}s10994\discretionary{%
+}{-}{-}008\discretionary{%
+}{-}{-}5078\discretionary{%
+}{-}{-}3}}
 
 
 \end{thebibliography}

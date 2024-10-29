@@ -60,7 +60,7 @@
 
 %% Paper title.
 
-\title{Global Illumination for Fun and Profit}
+\title{Towards Enhanced Topic Discovery on Semantic Maps for Biomedical Literature Exploration}
 
 %% This is how authors are specified in the conference style
 
@@ -77,27 +77,30 @@
 %% Author and Affiliation (multiple authors with multiple affiliations)
 \author{Bin Choi\thanks{e-mail: binchoi@u.yale-nus.edu.sg}\\ %
         \scriptsize Yale-NUS College %
-\and Ed Grimley\thanks{e-mail: ed.grimley@aol.com}\\ %
-     \scriptsize Grimley Widgets, Inc. %
-\and Martha Stewart\thanks{e-mail: martha.stewart@marthastewart.com}\\ %
-     \parbox{1.4in}{\scriptsize \centering Martha Stewart Enterprises \\ Microsoft Research}}
+\and Brian Ondov\thanks{e-mail: brian.ondov@yale.edu}\\ %
+     \parbox{1.5in}{\scriptsize \centering Department of Biomedical Informatics and Data Science \\ Yale University} %
+\and Huan He\thanks{e-mail: huan.he@yale.edu}\\ %
+     \parbox{1.5in}{\scriptsize \centering Department of Biomedical Informatics and Data Science \\ Yale University} %
+\and Hua Xu\thanks{e-mail: hua.xu@yale.edu}\\ %
+     \parbox{1.5in}{\scriptsize \centering Department of Biomedical Informatics and Data Science \\ Yale University} %
+}
 
 %% A teaser figure can be included as follows
 \teaser{
   \centering
-  \includegraphics[width=\linewidth]{CypressView}
+  \includegraphics[width=\linewidth]{MedVizTopicZoom}
   \caption{In the Clouds: Vancouver from Cypress Mountain.}
   \label{fig:teaser}
 }
 
 %% Abstract section.
 \abstract{
-    \lipsum[1] % filler text. Replace with your abstract.
+    The rapid growth of biomedical research has led to an overwhelming volume of literature, making it challenging for researchers to efficiently explore and analyze. While existing tools provide an overview of semantic maps and publication distributions, further refinement is needed to reveal fine-grained nuances and hierarchical topics. To address this, we propose a novel method for hierarchical topic modeling and label generation on 2D semantic maps. Our approach consists of three steps. First, we apply density-based hierarchical clustering using HDBSCAN to construct a topic tree. Second, we employ a novel tree-based TF-IDF method to refine topic representation using MeSH terms, capturing both general and local topic distinctions. Finally, we optimize label positioning using a centroid-based method to enhance visualization.
 } % end of abstract
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
 %% please capitalize first letter and insert punctuation after last keyword.
-\keywords{Radiosity, global illumination, constant time.}
+\keywords{Topic modeling, semantic map, tree-based TF-IDF.}  %% TODO: consider revising these keywords
 
 %% Copyright space is enabled by default as required by guidelines.
 %% It is disabled by the 'review' option or via the following command:
@@ -118,247 +121,42 @@
 \maketitle
 
 %% \section{Introduction} %for journal use above \firstsection{..} instead
-This template is for papers of VGTC-sponsored conferences which are \emph{\textbf{not}} published in a special issue of TVCG.
+The rapid growth of biomedical research has resulted in an exponential increase in the volume of publications, making it essential for researchers to utilize advanced tools to efficiently explore and analyze this vast body of literature \cite{Gonzalez-Marquez2024}. In recent years, literature-mining tools have gained significant attention, helping researchers extract valuable insights and information from large collections of publications. Among these tools, the application of large language models (LLMs) and text embedding techniques has become increasingly pivotal \cite{Simon2024}. By converting complex scientific texts into unified high-dimensional vectors, LLMs enable the use of machine learning and data mining techniques to facilitate data analysis and visualization.
+However, it is still challenging to reveal insights and nuances from large-scale literatures and their high-dimensional vectors, particularly in clustering and topic representation, which are crucial for understanding the topical landscape. In an effective semantic map, closely located embeddings should be semantically related, enabling users to grasp the thematic structure of the map. While existing methods such as BERTopic \cite{Grootendorst2022} and Top2Vec \cite{Angelov2020} offer embedding-based topic modeling, they tend to operate at a fixed level of generality and may not fully capture the fine-grained nuances and hierarchical structures present in large-scale literature collections. To address this, we propose a novel methodology that can capture both general and specific topics across different levels of semantic maps for biomedical publications, allowing for a more interactive and detailed exploration of the topics in clusters and sub-clusters.
 
-\section{Using This Template}
+\section{Methodology}
 
-\begin{itemize}
-\item If you receive compilation errors along the lines of ``\texttt{Package ifpdf Error: Name clash, \textbackslash ifpdf is already defined}'' then please add a new line ``\texttt{\textbackslash let\textbackslash ifpdf\textbackslash relax}'' right after the ``\texttt{\textbackslash documentclass[journal]\{vgtc\}}'' call. Note that your error is due to packages you use that define ``\texttt{\textbackslash ifpdf}'' which is obsolete (the result is that \texttt{\textbackslash ifpdf} is defined twice); these packages should be changed to use ifpdf package instead.
-\item The style uses the hyperref package, thus turns references into internal links. We thus recommend to make use of the ``\texttt{\textbackslash cref\{reference\}}'' call (instead of ``\texttt{Figure\~{}\textbackslash ref\{reference\}}'' or similar) since ``\texttt{\textbackslash cref\{reference\}}'' turns the entire reference into an internal link, not just the number. Examples: \cref{fig:vis_papers} and \cref{tab:vis_papers}.
-\item The style automatically looks for image files with the correct extension (eps for regular \LaTeX; pdf, png, and jpg for pdf\LaTeX), in a set of given subfolders (figures/, pictures/, images/). It is thus sufficient to use ``\texttt{\textbackslash includegraphics\{CypressView\}}'' (instead of ``\texttt{\textbackslash includegraphics\{pictures/CypressView.jpg\}}'').
-\item For adding hyperlinks and DOIs to the list of references, you can use ``\texttt{\textbackslash bibliographystyle\{abbrv-doi-hyperref-narrow\}}'' (instead of ``\texttt{\textbackslash bibliographystyle\{abbrv\}}''). It uses the doi and url fields in a bib\TeX\ entry and turns the entire reference into a link, giving priority to the doi. The doi can be entered with or without the ``\texttt{http://dx.doi.org/}'' url part. See the examples in the bib\TeX\ file and the bibliography at the end of this template.\\[1em]
-\textbf{Note 1:} occasionally (for some \LaTeX\ distributions) this hyper-linked bib\TeX\ style may lead to \textbf{compilation errors} (``\texttt{pdfendlink ended up in different nesting level ...}'') if a reference entry is broken across two pages (due to a bug in hyperref). In this case make sure you have the latest version of the hyperref package (i.\,e., update your \LaTeX\ installation/packages) or, alternatively, revert back to ``\texttt{\textbackslash bibliographystyle\{abbrv-doi-narrow\}}'' (at the expense of removing hyperlinks from the bibliography) and try ``\texttt{\textbackslash bibliographystyle\{abbrv-doi-hyperref-narrow\}}'' again after some more editing.\\[1em]
-\textbf{Note 2:} the ``\texttt{-narrow}'' versions of the bibliography style use the font ``PTSansNarrow-TLF'' for typesetting the DOIs in a compact way. This font needs to be available on your \LaTeX\ system. It is part of the \href{https://www.ctan.org/pkg/paratype}{``paratype'' package}, and many distributions (such as MikTeX) have it automatically installed. If you do not have this package yet and want to use a ``\texttt{-narrow}'' bibliography style then use your \LaTeX\ system's package installer to add it. If this is not possible you can also revert to the respective bibliography styles without the ``\texttt{-narrow}'' in the file name.\\[1em]
-DVI-based processes to compile the template apparently cannot handle the different font so, by default, the template file uses the \texttt{abbrv-doi} bibliography style but the compiled PDF shows you the effect of the \texttt{abbrv-doi-hyperref-narrow} style.
-\end{itemize}
+Our proposed method takes a 2D semantic map as input, which is generated from a collection of publications using LLM embedding and dimensional reduction techniques. In this semantic map, each publication is mapped to a point on the map using its 2D embeddings, which are generated using transformer-based language model \cite{BAAI2023} (BAAI/bge-small-en-v1.5) and t-distributed stochastic neighbor embedding (tSNE) \cite{vanderMaaten2008} to maintain meaningful spatial relationships. Then, our method conducts three phases to visualize the topic labels for this semantic map: (1) clustering, (2) topic representation, and (3) label positioning and data file generation. The details of each phase are as follows.
 
-\section{Bibliography Instructions}
+\subsection{First phase: density-based hierarchical clustering}
 
-\begin{itemize}
-\item Sort all bibliographic entries alphabetically but the last name of the first author. This \LaTeX/bib\TeX\ template takes care of this sorting automatically.
-\item Merge multiple references into one; e.\,g., use \cite{Kitware:2003,Max:1995:OMF} (not \cite{Kitware:2003}\cite{Max:1995:OMF}). Within each set of multiple references, the references should be sorted in ascending order. This \LaTeX/bib\TeX\ template takes care of both the merging and the sorting automatically.
-\item Verify all data obtained from digital libraries, even ACM's DL and IEEE Xplore  etc.\ are sometimes wrong or incomplete.
-\item Do not trust bibliographic data from other services such as Mendeley.com, Google Scholar, or similar; these are even more likely to be incorrect or incomplete.
-\item Articles in journal---items to include:
-  \begin{itemize}
-  \item author names
-	\item title
-	\item journal name
-	\item year
-	\item volume
-	\item number
-	\item month of publication as variable name (i.\,e., \{jan\} for January, etc.; month ranges using \{jan \#\{/\}\# feb\} or \{jan \#\{-{}-\}\# feb\})
-  \end{itemize}
-\item use journal names in proper style: correct: ``IEEE Transactions on Visualization and Computer Graphics'', incorrect: ``Visualization and Computer Graphics, IEEE Transactions on''
-\item Papers in proceedings---items to include:
-  \begin{itemize}
-  \item author names
-	\item title
-	\item abbreviated proceedings name: e.\,g., ``Proc.\textbackslash{} CONF\_ACRONYNM'' without the year; example: ``Proc.\textbackslash{} CHI'', ``Proc.\textbackslash{} 3DUI'', ``Proc.\textbackslash{} Eurographics'', ``Proc.\textbackslash{} EuroVis''
-	\item year
-	\item publisher
-	\item town with country of publisher (the town can be abbreviated for well-known towns such as New York or Berlin)
-  \end{itemize}
-\item article/paper title convention: refrain from using curly brackets, except for acronyms/proper names/words following dashes/question marks etc.; example:
-\begin{itemize}
-	\item paper ``Marching Cubes: A High Resolution 3D Surface Construction Algorithm''
-	\item should be entered as ``\{M\}arching \{C\}ubes: A High Resolution \{3D\} Surface Construction Algorithm'' or  ``\{M\}arching \{C\}ubes: A high resolution \{3D\} surface construction algorithm''
-	\item will be typeset as ``Marching Cubes: A high resolution 3D surface construction algorithm''
-\end{itemize}
-\item for all entries
-\begin{itemize}
-	\item DOI can be entered in the DOI field as plain DOI number or as DOI url; alternative: a url in the URL field
-	\item provide full page ranges AA-{}-BB
-\end{itemize}
-\item when citing references, do not use the reference as a sentence object; e.\,g., wrong: ``In \cite{Lorensen:1987:MCA} the authors describe \dots'', correct: ``Lorensen and Cline \cite{Lorensen:1987:MCA} describe \dots''
-\end{itemize}
+In this phase, we identify groups of semantically similar papers by analyzing their proximity in the semantic space. This process is conducted in a hierarchical manner, beginning with fine-grained clusters, and expanding to identify more general clusters. To capture the hierarchical structure of the semantic map, we propose using a topic tree, which organizes and represent topics as a tree structure within the semantic space. Each node in the topic tree represents a cluster of publications. Child nodes represent sub-clusters, reflecting subtopics within the broader context of the parent cluster. In this bottom-up process, we leverage a density-based clustering algorithm, HDBSCAN \cite{McInnes2017}, which does not require pre-specifying the number of clusters and excels in handling outliers, to assign relevant documents to clusters.
 
-\section{Supplemental Material Instructions}
-\label{sec:supplement_inst}
+Initially, we use heuristically defined parameters to identify fine-grained clusters. Then, the algorithm’s parameters are incrementally adjusted to identify larger, coarser-grained clusters. As each new, higher-level of clusters are identified, we assign pre-identified sub-clusters to new 'parent' clusters based on membership conditions, such as an overlap threshold. Some fine-grained clusters may not map to a parent cluster and remain as root nodes, representing the highest-level view of their topic. This process continues until an appropriate clustering for the highest-level view of the semantic space is achieved.
 
-In support of transparent research practices and long-term open science goals, you are encouraged to make your supplemental materials available on a publicly-accessible repository.
-Please describe the available supplemental materials in the \hyperref[sec:supplemental_materials]{Supplemental Materials} section.
-These details could include (1) what materials are available, (2) where they are hosted, and (3) any necessary omissions.
+\subsection{Second phase: topic representation based on MeSH terms, c-TF-IDF, and tree-based TF-IDF}
 
-\section{Figure Credits}
-\label{sec:figure_credits_inst}
+As MeSH terms offer comprehensive coverage of biomedical topics and are organized hierarchically, we use them for topic representation of clusters. Through the first phase, we have identified clusters of publications that represent the semantic/topics at varying levels of granularity. At the highest level, we can determine the major topics present on the semantic map through what BERTopic coins as class-based TF-IDF (c-TF-IDF) \cite{Grootendorst2022}. In our adaptation, we compile the MeSH terms for each document within a cluster and compare them with those of other clusters to identify the most relevant and representative MeSH term for each cluster.
 
-In the \hyperref[sec:figure_credits]{Figure Credits} section at the end of the paper, you should credit the original sources of any figures that were reproduced or modified.
-Include any license details necessary, as well as links to the original materials whenever possible.
-For credits to figures from academic papers, include a citation that is listed in the \textbf{References} section.
-An example is provided \hyperref[sec:figure_credits]{below}.
+While this approach works well for representing topics at the root nodes of the topic forest, it struggles to distinguish local differences among sibling sub-clusters further down the tree, often resulting in non-discriminative topics. To address this, we propose a novel tree-based TF-IDF procedure that applies c-TF-IDF only within sibling (or relative) sub-clusters. This method more effectively identifies local differences and nuances among sibling sub-clusters, as confirmed by our experiments.
 
-\section{Example Section}
+\subsection{Third phase: label positioning and data file generation}
 
-Lorem\marginpar{\small You can use the margins for comments while editing the submission, but please remove the marginpar comments for submission.} ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-dolore magna aliquyam erat, sed diam
-voluptua~\cite{Kitware:2003,Max:1995:OMF}. At vero eos et accusam et
-justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-invidunt ut labore et dolore magna aliquyam erat, sed diam
-voluptua. At vero eos et accusam et justo duo dolores et ea
-rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
-
-\section{Exposition}
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-vero eros et accumsan et iusto odio dignissim qui blandit praesent
-luptatum zzril delenit augue duis dolore te feugait nulla
-facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-aliquam erat volutpat~\cite{Kindlmann:1999:SAG}.
-
-\begin{equation}
-\sum_{j=1}^{z} j = \frac{z(z+1)}{2}
-\end{equation}
-
-\subsection{Lorem ipsum}
-
-Lorem ipsum dolor sit amet (see \cref{tab:vis_papers}), consetetur sadipscing elitr, sed diam
-nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-invidunt ut labore et dolore magna aliquyam erat, sed diam
-voluptua. At vero eos et accusam et justo duo dolores et ea
-rebum. 
-
-\begin{table}[tb]
-  \caption{VIS/VisWeek accepted/presented papers: 1990--2016.}
-  \label{tab:vis_papers}
-  \scriptsize%
-	\centering%
-  \begin{tabu}{%
-	r%
-	*{7}{c}%
-	*{2}{r}%
-	}
-  \toprule
-   year & \rotatebox{90}{Vis/SciVis} &   \rotatebox{90}{SciVis conf} &   \rotatebox{90}{InfoVis} &   \rotatebox{90}{VAST} &   \rotatebox{90}{VAST conf} &   \rotatebox{90}{TVCG @ VIS} &   \rotatebox{90}{CG\&A @ VIS} &   \rotatebox{90}{VIS/VisWeek} \rotatebox{90}{incl. TVCG/CG\&A}   &   \rotatebox{90}{VIS/VisWeek} \rotatebox{90}{w/o TVCG/CG\&A}   \\
-  \midrule
-	2016 & 30 &   & 37 & 33 & 15 & 23 & 10 & 148 & 115 \\
-  2015 & 33 & 9 & 38 & 33 & 14 & 17 & 15 & 159 & 127 \\
-  2014 & 34 &   & 45 & 33 & 21 & 20 &   & 153 & 133 \\
-  2013 & 31 &   & 38 & 32 &   & 20 &   & 121 & 101 \\
-  2012 & 42 &   & 44 & 30 &   & 23 &   & 139 & 116 \\
-  2011 & 49 &   & 44 & 26 &   & 20 &   & 139 & 119 \\
-  2010 & 48 &   & 35 & 26 &   &   &   & 109 & 109 \\
-  2009 & 54 &   & 37 & 26 &   &   &   & 117 & 117 \\
-  2008 & 50 &   & 28 & 21 &   &   &   & 99 & 99 \\
-  2007 & 56 &   & 27 & 24 &   &   &   & 107 & 107 \\
-  2006 & 63 &   & 24 & 26 &   &   &   & 113 & 113 \\
-  2005 & 88 &   & 31 &   &   &   &   & 119 & 119 \\
-  2004 & 70 &   & 27 &   &   &   &   & 97 & 97 \\
-  2003 & 74 &   & 29 &   &   &   &   & 103 & 103 \\
-  2002 & 78 &   & 23 &   &   &   &   & 101 & 101 \\
-  2001 & 74 &   & 22 &   &   &   &   & 96 & 96 \\
-  2000 & 73 &   & 20 &   &   &   &   & 93 & 93 \\
-  1999 & 69 &   & 19 &   &   &   &   & 88 & 88 \\
-  1998 & 72 &   & 18 &   &   &   &   & 90 & 90 \\
-  1997 & 72 &   & 16 &   &   &   &   & 88 & 88 \\
-  1996 & 65 &   & 12 &   &   &   &   & 77 & 77 \\
-  1995 & 56 &   & 18 &   &   &   &   & 74 & 74 \\
-  1994 & 53 &   &   &   &   &   &   & 53 & 53 \\
-  1993 & 55 &   &   &   &   &   &   & 55 & 55 \\
-  1992 & 53 &   &   &   &   &   &   & 53 & 53 \\
-  1991 & 50 &   &   &   &   &   &   & 50 & 50 \\
-  1990 & 53 &   &   &   &   &   &   & 53 & 53 \\
-  \midrule
-  \textbf{sum} & \textbf{1545} & \textbf{9} & \textbf{632} & \textbf{310} & \textbf{50} & \textbf{123} & \textbf{25} & \textbf{2694} & \textbf{2546} \\
-  \bottomrule
-  \end{tabu}%
-\end{table}
-
-\subsection{Filler Subsection to Flush Out the Paper}
-
-Lorem ipsum dolor sit amet (see \cref{fig:vis_papers}), consetetur sadipscing elitr, sed diam
-nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-takimata sanctus est Lorem ipsum dolor sit amet. 
-
-\subsubsection{Filler Subsubsection to Flush Out the Paper}
-
-\lipsum[1-2]% Just add some more arbitrary text so we see a fuller paper example
-
-\begin{figure}[tb]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{paper-count-2016}
- \caption{A visualization of the 1990--2016 data from \cref{tab:vis_papers}, recreated based on Fig.\ 1 from \cite{Isenberg:2017:VMC} and is in the public domain.}
- \label{fig:vis_papers}
-\end{figure}
-
-\subsubsection{Filler Subsubsection to Flush Out the Paper}
-
-Duis autem~\cite{Lorensen:1987:MCA}\footnote{The algorithm behind
-Marching Cubes \cite{Lorensen:1987:MCA} had already been
-described by Wyvill et al. \cite{Wyvill:1986:DSS} a year
-earlier.} vel eum iriure dolor in hendrerit
-in vulputate velit esse molestie consequat,\footnote{Footnotes
-appear at the bottom of the column.} vel illum dolore eu
-feugiat nulla facilisis at vero eros et accumsan et iusto odio
-dignissim qui blandit praesent luptatum zzril delenit augue duis
-dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-ut laoreet dolore magna aliquam erat volutpat.
+In the final phase, we focus on positioning the generated topic labels on the 2D semantic map and producing structured data outputs to support further analysis and visualization. After determining the representative topic for each cluster from the second phase, we employ a combination of centroid-based and hierarchical methods for label placement. Each topic label is initially positioned at the centroid of its corresponding cluster to reflect the geometric center of the documents within that cluster, and we assigned a zoom level to each level. Once label positions are decided, we generate a JSON format data file for rendering the labeled semantic map. The file includes the cluster membership of each document, the hierarchical structure of clusters, and the final positions of the topic labels. 
 
 
-\paragraph{Filler Paragraph to Flush Out the Paper}
+\section{Discussion and future work}
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-suscipit lobortis nisl ut aliquip ex ea commodo
-consequat~\cite{Nielson:1991:TAD}. Duis autem vel eum iriure dolor in
-hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-dignissim qui blandit praesent luptatum zzril delenit augue duis
-dolore te feugait nulla facilisi.
+To validate our method, we implemented the above algorithms in Python and developed a prototype based on our existing visualization system using three.js and WebGL techniques. As shown in Figure 1, we generated topic labels on a collection of 46,763 papers related programmed cell death 1 (PD1) and visualized them on the semantic map of the paper collection (Fig. 1a). While users zoom in on this semantic map, labels of fine-grained clusters will appear (Fig. 1b). During the development of our method, we demonstrated our prototype to domain experts of immunotherapy and got positive feedback. They commented that the labels are intuitive, but some labels are visually overlapped. In addition, some clusters share the same labels despite having different topics. 
 
-
-\section{Conclusion}
-
-\lipsum[1]%
-
-\section*{Supplemental Materials}
-\label{sec:supplemental_materials}
-
-Refer to the instructions for this section (\cref{sec:supplement_inst}).
-Below is an example you can follow that includes the actual supplemental material for this template:
-
-All supplemental materials are available on OSF at \url{https://doi.org/10.17605/OSF.IO/2NBSG}, released under a CC BY 4.0 license.
-In particular, they include (1) Excel files containing the data for and analyses for creating \cref{tab:vis_papers} and \cref{fig:vis_papers}, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices.
-Our other code is intellectual property of a corporation---Starbucks Research---and there is no feasible way to share it publicly.
-
-
-\section*{Figure Credits}
-\label{sec:figure_credits}
-
-Refer to the instructions for this section (\cref{sec:figure_credits_inst}).
-Here are the actual figure credits for this template:
-
-\Cref{fig:teaser} image credit: Scott Miller / Special to the Vancouver Sun, January 22, 2009, page A6.
-
-\Cref{fig:vis_papers} is a partial recreation of Fig.\ 1 from \cite{Isenberg:2017:VMC}, which is in the public domain.
+As our next step, we plan to optimize our positioning algorithm by adopting density-aware method to adjust the label positions based on the local density and proximity of neighboring clusters. We are also going to improve the topic summarization using large language models. 
 
 %% if specified like this the section will be committed in review mode
 \acknowledgments{
 The authors wish to thank A, B, and C. This work was supported in part by
 a grant from XYZ.}
+
+\newpage 
 
 %\bibliographystyle{abbrv}
 \bibliographystyle{abbrv-doi}
