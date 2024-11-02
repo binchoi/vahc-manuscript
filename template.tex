@@ -127,18 +127,18 @@ However, it is still challenging to reveal insights and nuances from large-scale
 
 \section{Methodology}
 
-Our proposed method takes a 2D semantic map as input, which is generated from a collection of publications using LLM embedding and dimensional reduction techniques. In this semantic map, each publication is mapped to a point on the map using its 2D embeddings. We generated the embeddings using transformer-based language model \cite{BAAI2023} (BAAI/bge-small-en-v1.5) and t-distributed stochastic neighbor embedding (tSNE) \cite{vanderMaaten2008} to maintain meaningful spatial relationships. Other text embedding models and dimensionality reduction techniques can also be used, provided that the resulting 2D semantic map preserves meaningful spatial relationships.
+Our proposed method takes a 2D semantic map as input, which is generated from a collection of publications using LLM embedding and dimensional reduction techniques. In this semantic map, each publication is mapped to a point on the map using its 2D embeddings. We generated the embeddings using transformer-based language model \cite{BAAI2023} (BAAI/bge-small-en-v1.5) and t-distributed stochastic neighbor embedding (tSNE) to maintain meaningful spatial relationships. Other text embedding models and dimensionality reduction techniques can also be used, provided that the resulting 2D semantic map preserves meaningful spatial relationships.
 
 Then, our method conducts three phases to visualize the topic labels for this semantic map: (1) clustering, (2) topic representation, and (3) label positioning and data file generation. The details of each phase are as follows.
 
-\subsection{First phase: density-based hierarchical clustering}
+\subsection{Phase 1: density-based hierarchical clustering}
 
 In this phase, we identify groups of semantically similar papers by analyzing their proximity in the semantic space. This process is conducted in a hierarchical manner, beginning with fine-grained clusters, and expanding to identify more general clusters. To capture the hierarchical structure of the semantic map, we propose using a topic tree, which organizes and represent topics as a tree structure within the semantic space. Each node in the topic tree represents a cluster of publications. Child nodes represent sub-clusters, reflecting subtopics within the broader context of the parent cluster. In this bottom-up process, we leverage a density-based clustering algorithm, HDBSCAN \cite{McInnes2017}, which does not require pre-specifying the number of clusters and excels in handling outliers, to assign relevant documents to clusters.
 
 Initially, we use heuristically defined parameters to identify fine-grained clusters (i.e., \texttt{minimum\_cluster\_size}, \texttt{min\_samples}). Then, the algorithm's parameters are incrementally adjusted to identify larger, coarser-grained clusters. As each new, higher-level of clusters are identified, we assign pre-identified sub-clusters to new `parent' clusters based on membership conditions, such as an overlap threshold. Some fine-grained clusters may not map to a parent cluster and remain as root nodes, representing the highest-level view of their topic. This process continues until an appropriate clustering for the highest-level view of the semantic space is achieved.
 
 
-\subsection{Second phase: topic representation based on MeSH terms, c-TF-IDF, and tree-based TF-IDF}
+\subsection{Phase 2: topic representation based on MeSH terms, c-TF-IDF, and tree-based TF-IDF}
 
 As MeSH terms offer comprehensive coverage of biomedical topics and are organized hierarchically, we use them for topic representation of clusters. Through the first phase, we have identified a hierarchical structure of clusters, where each cluster represents a distinct topic or subtopic at varying levels of granularity within the semantic map. 
 At the highest level, we can determine the major topics present on the given map using a technique which BERTopic coins as class-based TF-IDF (c-TF-IDF) \cite{Grootendorst2022}. In our adaptation, we compile the MeSH terms of each document within a cluster and compare them with those of other clusters to identify the most relevant and representative MeSH term for each cluster.
@@ -147,7 +147,7 @@ While this approach works well for representing topics at the root nodes of the 
 
 % figure about tree-based TF-IDF could be nice
 
-\subsection{Third phase: label positioning and data file generation}
+\subsection{Phase 3: label positioning and data file generation}
 
 In the final phase, we focus on positioning the generated topic labels on the 2D semantic map and producing structured data outputs to support further analysis and visualization. After determining the representative topic for each cluster in the second phase, we apply a centroid-based approach to place each label at the geometric center of its corresponding cluster. To reflect the hierarchical structure, we assign zoom levels to each label based on its position in the topic tree: higher-level topics remain visible when zoomed out, while more specific subtopics appear only as users zoom in.
 
@@ -160,7 +160,8 @@ Once label positions are decided, we generate a JSON format data file for render
 To validate our method, we implemented the above algorithms in Python and developed a prototype based on our existing visualization system using three.js and WebGL techniques. As shown in Figure 1, we generated topic labels on a collection of 46,763 papers related to programmed cell death 1 (PD-1 \& PD-L1) and visualized them on the semantic map of the paper collection (Fig. 1a). When users zoom in on this semantic map, labels of fine-grained clusters will appear (Fig. 1b). During the development of our method, we demonstrated our prototype to domain experts of immunotherapy and got positive feedback. They commented that the labels are intuitive, but some labels are visually overlapping. In addition, they observed that some smaller clusters, despite representing distinct topics, were still assigned the same labels.
 
 
-As the next step, we plan to optimize our positioning algorithm by implementing a density-aware approach that adjusts label placement based on the local density and proximity of neighboring clusters. We will also improve topic summarization using large language models and gather more user feedback to evaluate our clustering and labeling performance on key metrics like coherence, accuracy, and robustness.
+As the next step, we plan to optimize our positioning algorithm by implementing a density-aware approach that adjusts label placement based on the local density and proximity of neighboring clusters. We will also gather more user feedback to thoroughly evaluate our clustering and labeling performance across key metrics such as coherence, accuracy, and robustness. Finally, we will enhance our topic summarization and representation by leveraging large language models to generate topic labels that extend beyond MeSH terms and capture subtle distinctions between clusters.
+
 
 
 % Although our proposed methodology could be applied to topic modeling in other academic domains, we limit our discussion to biomedical literature due to our reliance on MeSH terms which are specific to the biomedical domain.  % TODO: check if this is the best place to put this

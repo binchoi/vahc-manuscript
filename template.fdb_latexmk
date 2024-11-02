@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex template"] 1730525789.98449 "template.aux" "template.bbl" "template" 1730525801.59593 0
+["bibtex template"] 1730527736.19873 "template.aux" "template.bbl" "template" 1730528179.28894 0
   "./abbrv-doi.bst" 1707947791 27244 4c23ed8d63be63dc39b9aab722083c7e ""
   "./template.bib" 1730175115.79189 1838 7d4c92e87dfefcf6b3dbc50134f281a9 ""
-  "template.aux" 1730525801.50742 2650 05a649ce5605039736a2b2110617e5b9 "pdflatex"
+  "template.aux" 1730528179.21878 2514 5e0afdb551909c0462d4dcdcc33cacb3 "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
   (rewritten before read)
-["pdflatex"] 1730525801.0141 "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" "template.pdf" "template" 1730525801.59608 0
-  "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" 1730525800.82038 15306 7ee2cd86d78253517ad7c8f6d1b855fb ""
+["pdflatex"] 1730528178.75637 "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" "template.pdf" "template" 1730528179.28908 0
+  "/Users/binchoi/Documents/office-work/yale-bids/posters/vahc2024/ieee/vahc-manuscript/template.tex" 1730528178.56499 15437 9d85aa16aad8507bbace23569d7e3780 ""
   "/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
   "/Users/binchoi/Library/TinyTeX/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -114,11 +114,11 @@
   "/Users/binchoi/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1730173018 1901429 a66cffc616227849a6860755e874f831 ""
   "/Users/binchoi/Library/TinyTeX/texmf.cnf" 1726685148.97635 708 85fd07691b6294ba94c59dbc62380410 ""
   "figures/IEEEFigure1.jpeg" 1730522328.63002 1731902 7e82b44cff299b6c23ab6240cbe95295 ""
-  "template.aux" 1730525801.50742 2650 05a649ce5605039736a2b2110617e5b9 "pdflatex"
-  "template.bbl" 1730525790.0037 2450 3bbb3f3c2bdcd45cfaffa5b3b62d9629 "bibtex template"
-  "template.brf" 1730525801.5081 373 f057b16bc11e0e45ed07107c21ca6c67 "pdflatex"
-  "template.out" 1730525801.50797 1568 ce9cc2e52d57cd90f056e26b8f2b4aaf "pdflatex"
-  "template.tex" 1730525800.82038 15306 7ee2cd86d78253517ad7c8f6d1b855fb ""
+  "template.aux" 1730528179.21878 2514 5e0afdb551909c0462d4dcdcc33cacb3 "pdflatex"
+  "template.bbl" 1730527736.21753 2114 61e362fe4e5703e555549af98e6ed10f "bibtex template"
+  "template.brf" 1730528179.21936 325 0148c72aadc7a3cf2d71c66bb2ef1a7e "pdflatex"
+  "template.out" 1730528179.21924 1503 9cc448a491d6043d939dd2b8fba8ab88 "pdflatex"
+  "template.tex" 1730528178.56499 15437 9d85aa16aad8507bbace23569d7e3780 ""
   "vgtc.cls" 1707947791 35448 54bdac3a09617e4b0913fc2f7a4a00d4 ""
   (generated)
   "template.aux"

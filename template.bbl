@@ -62,16 +62,4 @@ E.~Simon, K.~Swanson, and J.~Zou.
 }{-}{-}y}}
 
 
-\bibitem{vanderMaaten2008}
-L.~van~der Maaten and G.~Hinton.
-\newblock {Visualizing data using t-SNE}.
-\newblock {\em J Mach Learn Res}, 9:2579--2605, 2008. doi: {{%
-10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1007\discretionary{/}{%
-}{/}s10994\discretionary{%
-}{-}{-}008\discretionary{%
-}{-}{-}5078\discretionary{%
-}{-}{-}3}}
-
-
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.28)  2 NOV 2024 01:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.28)  2 NOV 2024 02:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -423,8 +423,8 @@ LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 1
  (/Users/binchoi/Library/TinyTeX/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1867) in paragraph at lines 141--141
-[]\OT1/phv/b/n/9 Second phase: topic rep-re-sen-ta-tion based on
+Underfull \hbox (badness 1102) in paragraph at lines 141--141
+[]\OT1/phv/b/n/9 Phase 2: topic rep-re-sen-ta-tion based on MeSH
  []
 
 
@@ -438,37 +438,31 @@ Underfull \hbox (badness 2205) in paragraph at lines 19--19
 []\OT1/ptm/m/n/8 BAAI.  bge-small-en-v1.5.  [][]$\OT1/txtt/m/n/8 https : / / huggingface . co / BAAI /
  []
 
+)
 
-
-[2])
-
-
-
-[3
-
-] (./template.aux)
+[2] (./template.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: CE9CC2E52D57CD90F056E26B8F2B4AAF;1568.
+(rerunfilecheck)             Checksum: 9CC448A491D6043D939DD2B8FBA8AB88;1503.
 Package rerunfilecheck Info: File `template.brf' has not changed.
-(rerunfilecheck)             Checksum: F057B16BC11E0E45ED07107C21CA6C67;373.
+(rerunfilecheck)             Checksum: 0148C72AADC7A3CF2D71C66BB2EF1A7E;325.
  ) 
 Here is how much of TeX's memory you used:
- 12661 strings out of 475537
- 215772 string characters out of 5776540
+ 12655 strings out of 475537
+ 215667 string characters out of 5776540
  755753 words of memory out of 5000000
- 35104 multiletter control sequences out of 15000+600000
+ 35100 multiletter control sequences out of 15000+600000
  592147 words of font info for 94 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,13n,93p,1087b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,13n,93p,1087b,438s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/binchoi/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (3 pages, 1813577 bytes).
+Output written on template.pdf (2 pages, 1812892 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
